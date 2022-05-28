@@ -44,7 +44,7 @@ public class MobilePurchase {
         		}
    @AfterClass
 	public static void CloseBrowser() {
-	
+	driver.quit();
 	}
    static  long starttime;
    @Before
@@ -92,7 +92,7 @@ public class MobilePurchase {
 	driver.switchTo().window(Win);
     WebElement FinalMname=	driver.findElement(By.xpath("//span[@class='B_NuCI']"));
    String mobileName= FinalMname.getText();
-   File f= new File("C:\\Users\\jeyapandi\\Desktop\\Book1.xlsx");
+   File f= new File("C:\\Users\\jeyapandi\\eclipse-workspace\\Flipkart-Junit\\src\\test\\resources\\Files\\Book1.xlsx");
    FileInputStream f1= new FileInputStream(f);
    XSSFWorkbook book= new XSSFWorkbook(f1);
    XSSFSheet sheet=book.getSheet("Mobile");
